@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap");
+
+:root {
+  --sky: #4fc3f7;
+  --sun: #ffd54f;
+  --rain: #5c7cfa;
+  --bg: #e0f7fa;
+  --card-bg: white;
+  --text: #1a237e;
+  --radius: 20px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  background: linear-gradient(135deg, #e0f7fa, #b3e5fc, #e8f5e9);
+  min-height: 100vh;
+  padding: 24px;
+}
+
+#app {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: 900;
+  color: var(--text);
+  text-align: center;
+  margin-bottom: 24px;
+  letter-spacing: -1px;
+}
+
+h2 {
+  text-align: center;
+  color: var(--text);
+  margin-bottom: 24px;
+  letter-spacing: -1px;
+}
+
+/* NAV BOUTONS */
+nav {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+}
+
+nav button {
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 50px;
+  background: white;
+  color: var(--text);
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+}
+
+nav button:hover {
+  background: var(--sun);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* CARTE CURRENT */
+#current-weather {
+  background: linear-gradient(135deg, #5c7cfa, #4fc3f7);
+  color: white;
+  border-radius: var(--radius);
+  padding: 32px;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 32px rgba(92, 124, 250, 0.3);
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+#current-weather p {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+#current-weather p:first-child {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+#current-img {
+  text-align: center;
+  font-size: 50px;
+}
+
+/* LISTE PRÉVISIONS */
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+ul li {
+  background: white;
+  border-radius: var(--radius);
+  padding: 16px 24px;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease;
+}
+
+ul li:hover {
+  transform: translateX(6px);
+}
