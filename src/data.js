@@ -24,6 +24,14 @@ export const cities = {
     lat: 43.2965,
     lon: 5.3698,
   },
+  Mesanger: {
+    lat: 47.4328,
+    lon: -1.2312,
+  },
+  Quimper: {
+    lat: 47.996,
+    lon: -4.0979,
+  },
 };
 
 // Interprétation simplifiée des codes météo :

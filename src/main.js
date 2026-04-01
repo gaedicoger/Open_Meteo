@@ -29,11 +29,11 @@ let renderOpenMeteo = async (lat, lon, name) => {
   const day4 = document.getElementById("day4");
   const day5 = document.getElementById("day5");
 
-  day1.innerHTML = ` Jour 1 : ${weatherCodes[result.daily.weather_code[0]]} Temp min : ${result.daily.temperature_2m_min[0]} C° Temp max : ${result.daily.temperature_2m_max[0]} C°`;
-  day2.innerHTML = ` Jour 2 : ${weatherCodes[result.daily.weather_code[1]]} Temp min : ${result.daily.temperature_2m_min[1]} C° Temp max : ${result.daily.temperature_2m_max[1]} C°`;
-  day3.innerHTML = ` Jour 3 : ${weatherCodes[result.daily.weather_code[2]]} Temp min : ${result.daily.temperature_2m_min[2]} C° Temp max : ${result.daily.temperature_2m_max[2]} C°`;
-  day4.innerHTML = ` Jour 4 : ${weatherCodes[result.daily.weather_code[3]]} Temp min : ${result.daily.temperature_2m_min[3]} C° Temp max : ${result.daily.temperature_2m_max[3]} C°`;
-  day5.innerHTML = ` Jour 5 : ${weatherCodes[result.daily.weather_code[4]]} Temp min : ${result.daily.temperature_2m_min[4]} C° Temp max : ${result.daily.temperature_2m_max[4]} C°`;
+  day1.innerHTML = ` Jour 1 : ${weatherCodes[result.daily.weather_code[1]]} Temp min : ${result.daily.temperature_2m_min[1]} °C Temp max : ${result.daily.temperature_2m_max[0]} °C`;
+  day2.innerHTML = ` Jour 2 : ${weatherCodes[result.daily.weather_code[2]]} Temp min : ${result.daily.temperature_2m_min[2]} °C Temp max : ${result.daily.temperature_2m_max[1]} °C`;
+  day3.innerHTML = ` Jour 3 : ${weatherCodes[result.daily.weather_code[3]]} Temp min : ${result.daily.temperature_2m_min[3]} °C Temp max : ${result.daily.temperature_2m_max[2]} °C`;
+  day4.innerHTML = ` Jour 4 : ${weatherCodes[result.daily.weather_code[4]]} Temp min : ${result.daily.temperature_2m_min[4]} °C Temp max : ${result.daily.temperature_2m_max[3]} °C`;
+  day5.innerHTML = ` Jour 5 : ${weatherCodes[result.daily.weather_code[5]]} Temp min : ${result.daily.temperature_2m_min[5]} °C Temp max : ${result.daily.temperature_2m_max[4]} °C`;
 };
 
 // =====================================================================
@@ -52,14 +52,19 @@ nantes.addEventListener("click", () =>
   renderOpenMeteo(cities.Nantes.lat, cities.Nantes.lon, "Nantes"),
 );
 
-const paris = document.getElementById("paris");
-paris.addEventListener("click", () =>
-  renderOpenMeteo(cities.Paris.lat, cities.Paris.lon, "Paris"),
+const mesanger = document.getElementById("mesanger");
+mesanger.addEventListener("click", () =>
+  renderOpenMeteo(cities.Mesanger.lat, cities.Mesanger.lon, "Mésanger"),
 );
 
 const rennes = document.getElementById("rennes");
 rennes.addEventListener("click", () =>
   renderOpenMeteo(cities.Rennes.lat, cities.Rennes.lon, "Rennes"),
+);
+
+const quimper = document.getElementById("quimper");
+quimper.addEventListener("click", () =>
+  renderOpenMeteo(cities.Quimper.lat, cities.Quimper.lon, "Quimper"),
 );
 
 const caen = document.getElementById("caen");
