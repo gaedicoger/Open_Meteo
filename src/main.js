@@ -22,6 +22,7 @@ let renderOpenMeteo = async (lat, lon, name) => {
   <p> 🌡️ Température actuelle : ${result.current.temperature_2m} °C</p>
   <p> 🍃 Vitesse du vent : ${result.current.wind_speed_10m} km/h</p>`;
 
+  //Faire un forEach ici pour récupérer le nom de la ville et récupérer les element + les afficher
   //DailyWeather à 5 jours :
   const day1 = document.getElementById("day1");
   const day2 = document.getElementById("day2");
@@ -44,6 +45,9 @@ renderOpenMeteo(cities.Nantes.lat, cities.Nantes.lon, "Nantes");
 // =====================================================================
 // - - - - - - - - - - - B U T T O N S- - - - - - - - - - - - - - -
 // =====================================================================
+
+//Faire un forEach pour récupérer et afficher les boutons:
+
 // Je récupère le bouton HMTL de la ville
 const nantes = document.getElementById("nantes");
 // J'écoute le click
