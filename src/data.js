@@ -32,6 +32,10 @@ export const cities = {
     lat: 47.996,
     lon: -4.0979,
   },
+  "Nort-sur-Erdre": {
+    lat: 47.4399,
+    lon: -1.4991,
+  },
 };
 
 // Interprétation simplifiée des codes météo :

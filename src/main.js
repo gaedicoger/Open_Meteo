@@ -11,6 +11,7 @@ import { cities, weatherCodes } from "./data";
 
 let renderOpenMeteo = async (lat, lon, name) => {
   const result = await callOpenMeteoAPI(lat, lon); //je stocke mes données issues du fetch en appelant la fonction
+  console.log(result);
 
   // =====================================================================
   // - - - - - - - - - - - RECUPERER ET AFFICHER LES DONNEES - - - - - - - - - - - - - - -
@@ -54,6 +55,15 @@ const nantes = document.getElementById("nantes");
 nantes.addEventListener("click", () =>
   //J'apelle la fonction pour afficher les infos de la ville
   renderOpenMeteo(cities.Nantes.lat, cities.Nantes.lon, "Nantes"),
+);
+
+const nort = document.getElementById("Nort-sur-Erdre");
+nort.addEventListener("click", () =>
+  renderOpenMeteo(
+    cities["Nort-sur-Erdre"].lat,
+    cities["Nort-sur-Erdre"].lon,
+    "Nort-sur-Erdre",
+  ),
 );
 
 const mesanger = document.getElementById("mesanger");
